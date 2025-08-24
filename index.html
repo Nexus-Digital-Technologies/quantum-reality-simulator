@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quantum Reality Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⚛️ QUANTUM REALITY SIMULATOR ⚛️</h1>
+    <p class="subtitle">Experience the Strange World of Quantum Mechanics</p>
+
+    <section class="simulation-area">
+      <div class="quantum-box">
+        <h3>Wave Function Visualization</h3>
+        <canvas id="waveCanvas" width="400" height="300"></canvas>
+      </div>
+
+      <div class="quantum-box">
+        <h3>Particle Detection</h3>
+        <canvas id="particleCanvas" width="400" height="300"></canvas>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div class="control-panel">
+        <h4>Quantum State Control</h4>
+        <div class="btn-row">
+          <button id="btnSuperposition">Create Superposition</button>
+          <button id="btnMeasure">Measure System</button>
+          <button id="btnReset">Reset System</button>
+        </div>
+        <label for="uncertaintySlider">Uncertainty: <span id="uncertaintyValue">50%</span></label>
+        <input type="range" id="uncertaintySlider" min="0" max="100" value="50" />
+      </div>
+
+      <div class="control-panel">
+        <h4>Wave Properties</h4>
+        <div class="btn-row">
+          <button id="btnToggleWave">Toggle Wave Type</button>
+          <button id="btnInterference">Add Interference</button>
+        </div>
+        <label for="frequencySlider">Frequency: <span id="frequencyValue">1.0</span></label>
+        <input type="range" id="frequencySlider" min="0.1" max="3" step="0.1" value="1" />
+      </div>
+
+      <div class="control-panel">
+        <h4>Quantum Effects</h4>
+        <div class="btn-row">
+          <button id="btnTunnel">Quantum Tunneling</button>
+          <button id="btnEntangle">Entanglement</button>
+          <button id="btnObserver">Observer Effect</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="quantum-state">
+      <h4>System State Information</h4>
+      <div class="state-info">
+        <div>
+          <strong>State:</strong> <span id="currentState">Superposition</span><br>
+          <strong>Measured:</strong> <span id="measurementStatus">No</span><br>
+          <strong>Entangled:</strong> <span id="entanglementStatus">No</span>
+        </div>
+        <div>
+          <strong>Observer Present:</strong> <span id="observerStatus">No</span><br>
+          <strong>Wave Collapsed:</strong> <span id="collapseStatus">No</span><br>
+          <strong>Tunneling:</strong> <span id="tunnelingStatus">No</span>
+        </div>
+      </div>
+
+      <div>
+        <strong>Probability Distribution:</strong>
+        <div>Position A:
+          <div class="probability-bar"><div class="probability-fill" id="probA" style="width:50%"></div></div>
+        </div>
+        <div>Position B:
+          <div class="probability-bar"><div class="probability-fill" id="probB" style="width:50%"></div></div>
+        </div>
+      </div>
+
+      <div class="measurement-result" id="measurementResult">
+        System in quantum superposition — all possibilities exist simultaneously.
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
